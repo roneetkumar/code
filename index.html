@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QR</title>
+    <script src="functions/jquery.min.js"></script>
+    <script type="text/javascript" src="functions/jquery.qrcode.min.js"></script>
+    <script type="text/javascript" src="functions/index.js"></script>
+    <link rel="stylesheet" href="styles/index.min.css">
+    <meta name="theme-color" content="#F44336" />
+    <link rel="manifest" href="functions/manifest.json">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="input-elements">
+            <div class="input-bar">
+                <input type="text" class="qrText" placeholder="URL or Text">
+                <button type="submit" id="generate-btn">
+                    <svg viewBox="0 0 24 24">
+                        <path fill="#000000" d="M3,11H5V13H3V11M11,5H13V9H11V5M9,11H13V15H11V13H9V11M15,11H17V13H19V11H21V13H19V15H21V19H19V21H17V19H13V21H11V17H15V15H17V13H15V11M19,19V15H17V19H19M15,3H21V9H15V3M17,5V7H19V5H17M3,3H9V9H3V3M5,5V7H7V5H5M3,15H9V21H3V15M5,17V19H7V17H5Z" />
+                    </svg>
+            </button>
+            </div>
+            <br>
+            <a href="" download="QR-Code" class="downloadCode">
+                <div id="qrcode"></div>
+            </a>
+
+        </div>
+    </div>
+</body>
+
+<script src="service-worker.js">
+</script>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('service-worker.js')
+            .then(function() {
+                console.log("Service-Worker-Registered");
+            });
+    }
+</script>
+
+</html>
