@@ -29,11 +29,11 @@ const PRECACHE_URLS = [
     'functions/index.js',
     'functions/jquery.qrcode.min.js',
     // manifest file
-    'functions/manifest.json'
+    'functions/manifest.json',
     // assets
     // 'assets/copy.svg',
-    // 'assets/512x512.png',
-    // 'assets/favicon.ico'
+    'assets/512x512.png',
+    'assets/favicon.ico'
 
 ];
 
