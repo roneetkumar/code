@@ -35,5 +35,4 @@ $(function() {
         $('.downloadCode').attr('href', img);
     });
 
-
 });

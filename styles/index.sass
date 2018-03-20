@@ -5,7 +5,7 @@
 *
     margin: 0
     padding: 0
-    font-family: 'Roboto'
+    font-family: 'Space Mono', monospace, sans-serif
     cursor: default
     -webkit-user-select: none
     -moz-user-select: none
@@ -13,11 +13,27 @@
     user-select: none
 
 body
-    background: linear-gradient(to bottom, #F44336, #E91E63)
+    background: linear-gradient(to bottom, #FFEB3B, #E91E63)
+
     .wrapper
         height: calc(100vh - 48px)
         padding: 24px
         overflow: hidden
+        h1.app-title
+            position: fixed
+            font-size: 20px
+            color: #E91E63
+            font-weight: 700
+            display: inline-block
+            margin-left: 52px
+            letter-spacing: 2px
+            line-height: 40px
+
+        img.app-logo
+            position: fixed
+            width: 40px
+            height: 40px
+            float: left
         .input-elements
             @include centered-y
             max-width: 344px
@@ -29,12 +45,12 @@ body
                 max-width: 48px
                 position: relative
                 border-radius: 50px
-                box-shadow: $box-shadow-3dp
+                box-shadow: $box-shadow-2dp
                 overflow: hidden
-                transition: all 255ms ease-out 355ms,transform 255ms ease-out
+                transition: all 255ms ease-out 455ms,transform 255ms ease-out
                 z-index: 1
                 margin: 0 auto
-                transform: scale(2)
+                transform: scale(3)
                 input.qrText
                     background: #fff
                     width: 100%
@@ -57,7 +73,6 @@ body
                     outline: 0
                     box-shadow: $box-shadow-4dp
                     font-size: 14px
-                    font-weight: 500
                     padding: 4px
                     z-index: 1
                     transition: transform 255ms ease-in-out
@@ -83,3 +98,14 @@ body
                 margin: 30px auto
                 border: 5px solid #FFEB3B
                 border-radius: 20px
+                &::after
+                    content: "Tap on QR Code to Download"
+                    position: absolute
+                    width: auto
+                    bottom: -64px
+                    left: 50%
+                    transform: translateX(-50%)
+                    display: inline-table
+                    color: #FFEB3B
+                    font-weight: 700
+                    font-size: 18px
